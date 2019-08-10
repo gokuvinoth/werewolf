@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+  /* border: solid red 1px; */
+}
+
+body {
+  /* display: inline-block; */
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  background-color: #323232;
+  color: #dedede;
+}
+/* .title {
+    background: aqua;
+    text-align: center;
+    font-family: cursive;
+    margin: 0;
+    width: 100;
+    height: auto;
+  } */
+.align {
+  text-align: center;
+}
+.wolf {
+  width: 100px;
+  height: 100px;
+}
+.inputPlayer {
+  margin-left: 1em;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  box-shadow: 5px 5px 10px black;
+  padding: 0.5em;
+}
+.add_btn,
+.start_btn {
+  margin-left: 0.5em;
+  border: 3px solid white;
+  padding: 4px 22px;
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: bold;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: transparent;
+}
+.addPlayer {
+  text-align: center;
+}
+.game-text {
+  margin: 1em;
+  font-size: 1aem;
+  font-weight: 800;
+}
+.player-name {
+  border: 2px solid white;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  font-size: 1em;
+  font-weight: bold;
+  box-shadow: 0px 4px 4px black;
+  background: white;
+  margin: 0.5em;
+  text-align: center;
+}
+.player-list {
+  list-style-type: none;
+  /* border: none; */
+
+  text-align: center;
+}
+/* .player-list-cards > img {
+  max-width: 10%;
+  max-height: 40%; 
+  max-width: 20em;
+  max-height: 25em;
+} */
+.player-list-cards {
+  /* width: 30em;
+  height: 35em; */
+}
+.player-list-cards > h3 {
+  color: black;
+}
+/* .gamePlayers {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center center;
+    grid-gap: 1em;
+  } */
+
+.player_role {
+  width: 30vw;
+  height: 30vh;
+}
+
+@media (min-width: 150px) and (max-width: 500px) {
+  .gamePlayers {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    place-items: center left;
+    grid-gap: 0.5em;
+  }
+  .player-list-cards {
+    list-style-type: none;
+    border: 1px solid greenyellow;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    box-shadow: 0px 4px 4px black;
+    background: white;
+    margin-left: 1.25em;
+    text-align: center;
+    width: 70vw;
+
+    /* width: 85vw;
+    height: 80vh; */
+  }
+  .add_btn,
+  .start_btn {
+    display: inline-block;
+    margin-top: 1em;
+    margin-right: 0.5em;
+  }
+  .inputPlayer {
+    width: 80%;
+  }
+}
+@media (min-width: 501px) and (max-width: 900px) {
+  .gamePlayers {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    place-items: center center;
+    grid-gap: 0.5em;
+  }
+
+  .player-list-cards {
+    list-style-type: none;
+    border: 1px solid greenyellow;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    box-shadow: 0px 4px 4px black;
+    background: white;
+    margin: 2em;
+    text-align: center;
+    width: 50vw;
+    /* height: 70vh; */
+  }
+}
+
+@media (min-width: 901px) and (max-width: 2000px) {
+  .gamePlayers {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center center;
+    grid-gap: 0.1em;
+  }
+  .player-list-cards {
+    list-style-type: none;
+    border: 1px solid greenyellow;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    box-shadow: 0px 4px 4px black;
+    background: white;
+    margin: 0.25em;
+    text-align: center;
+    width: 20vw;
+  }
+  .player_role {
+    width: 10vw;
+  }
+}
+.hidden {
+  display: none;
+}
+.xoom {
+  height: 500px;
+  /*background: url("img/logo_1.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+  text-align: center;
+  visibility: visible;
+  opacity: 1;
+  transform: scale(2);
+  transition: all 1.5s ease-in;
+  line-height: 41;
+}
+.xoom_animate {
+  height: 500px;
+  /*background: url("img/logo_1.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+  line-height: 41;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(15);
+  /* transition: visibility 0s 2s, opacity 2s linear; */
+  transition: all 2s ease-in;
+}
