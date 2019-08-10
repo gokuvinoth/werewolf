@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="app.css" />
+  </head>
+  <body>
+    <div class="bar">
+      <div class="align">
+        <img class="wolf" src="img\logo.png" alt="wolf" />
+      </div>
+
+      <div class="addPlayer">
+        <p>Add players and start the Game</p>
+        <input class="inputPlayer" id="inputPlayer" type="text" />
+        <button class="add_btn" id="add">Add</button>
+        <button class="start_btn" id="start">Start</button>
+      </div>
+      <div class="players">
+        <ul class="player">
+          <script type="text/template" id="player-template">
+            <button class="player-name"><li class="player-list" data-listId={{index}}>{{player}} <span data-listId={{index}}><i class="far fa-times-circle"></i></span></li></button>
+          </script>
+        </ul>
+      </div>
+    </div>
+    <div class="game">
+      <p class="game-text"></p>
+      <script type="text/template" id="game-player-template">
+        <li class="player-list-cards" data-gamePlayerId={{gamePlayerId}}>
+           <img class="player_role"src="img\{{role}}.png" alt="{{role}}"/>
+        <h3>{{gamePlayer}}</h3><span data-roleId={{roleId}}>{{role}}</span></li>
+      </script>
+      <div class="xoom hidden">
+        <img src="img\logo_1.png" />
+      </div>
+      <ul class="gamePlayers hidden"></ul>
+    </div>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.4.1/js/all.js"
+      integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
